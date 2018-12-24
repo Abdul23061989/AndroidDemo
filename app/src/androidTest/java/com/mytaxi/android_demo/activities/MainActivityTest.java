@@ -26,7 +26,9 @@ public class MainActivityTest
     public ActivityTestRule<MainActivity> mainActivityActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Before
-    public void setUp(){ IdlingRegistry.getInstance().register(EspressoIdlingResource.getIdlingResource());}
+    public void setUp() {
+        IdlingRegistry.getInstance().register(EspressoIdlingResource.getIdlingResource());
+    }
 
     @Test
     public void Task_TestAutomation()
@@ -41,6 +43,7 @@ public class MainActivityTest
 
     @After
     public void tearDown(){
-        IdlingRegistry.getInstance().unregister(EspressoIdlingResource.getIdlingResource()); }
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResource.getIdlingResource());
+    }
 
 }
